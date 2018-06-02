@@ -1,0 +1,28 @@
+.site-nav {
+    height: 55px;
+    background-color: $color-site-nav;
+    color: $color-default-text;
+
+    .inner-wrapper {
+        max-width: 1024px;
+
+        .logo {
+            font-size: 24px;
+            
+            &:hover {
+                color: $color-text-hover;
+                cursor: pointer;
+            }
+        }
+
+        .tab {
+            margin-left: 10px;
+            margin-right: 10px;
+
+            &:hover {
+                color: $color-text-hover;
+                cursor: pointer;
+            }
+        }
+    }
+}

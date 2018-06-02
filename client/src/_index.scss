@@ -1,0 +1,21 @@
+/* GLOBALS */
+@import 'scss/colors';
+@import 'scss/flex';
+@import 'scss/layout';
+
+/* APP */
+@import 'App';
+
+/* Components */
+@import 'site-nav/site-nav';
+
+body {
+  margin: 0px !important;
+  background-color: $color-page-background;
+}
+
+div {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}

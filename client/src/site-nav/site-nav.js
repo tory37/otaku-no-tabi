@@ -1,18 +1,21 @@
 import React, { Component } from 'react';
-import './site-nav.scss';
 
 class SiteNav extends Component {
   render() {
     return (
-        <div className="site-nav full-width">
-          <div className="flex row justify-end align-center full-width">
-              <div className="site-nav-logo align-self-start">
-                Otaku no Tabi
-              </div>
+        <div className="site-nav flex row justify-center align-center full-width">
+            <div className="inner-wrapper flex row justify-end align-center full-width full-height">
+                <div className="logo justify-self-start">
+                  Otaku no Tabi
+                </div>
 
-              <div>
-                Podcasts
-              </div>
+                <div className="tab">
+                  Home
+                </div>
+
+                <div className="tab">
+                  Podcasts
+                </div>
             </div>
         </div>
     );
