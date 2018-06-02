@@ -2,9 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 // CSS
-import './index.css';
-import './css/flex.css';
-import './css/layout.css';
+import './index.scss';
+import './scss/flex.scss';
+import './scss/layout.scss';
 
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';

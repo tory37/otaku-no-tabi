@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './site-nav.css';
+import './site-nav.scss';
 
 class SiteNav extends Component {
   render() {
