@@ -1,7 +1,7 @@
 .site-nav {
     height: 55px;
-    background-color: $color-site-nav;
-    color: $color-default-text;
+    background-color: $color-page-foreground;
+    color: $color-text-basic;
 
     .inner-wrapper {
         max-width: 1024px;
@@ -10,7 +10,6 @@
             font-size: 24px;
             
             &:hover {
-                color: $color-text-hover;
                 cursor: pointer;
             }
         }
@@ -20,7 +19,6 @@
             margin-right: 10px;
 
             &:hover {
-                color: $color-text-hover;
                 cursor: pointer;
             }
         }
