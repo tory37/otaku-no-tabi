@@ -37,13 +37,20 @@ class EpisodeList extends Component {
     }
 
     createEpisodes = () => {
+        var keywords = this.props.keywords;
         let episodes = [];
 
         if (this.state.podcastJson) {
             console.log(this.state.podcastJson.items);
 
-            episodes = this.state.podcastJson.items.map((rssItem) => {
+            episodes = this.state.podcastJson.items.filter((rssItem) => {
+                if (rssItem.title.includes(keywords)) {
+                    return true;
+                } 
+                return false;
+            }).map((rssItem) => {
                 var episode = new EpisodeModel(rssItem);
+            
                 return (
                     <EpisodeFull episode={ episode } />
                 )

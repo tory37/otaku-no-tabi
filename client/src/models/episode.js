@@ -1,6 +1,6 @@
 class EpisodeModel {
     constructor(rssItem) {
-        this.content = rssItem['content:encoded'];
+        this.content = rssItem['content:encoded'].replace('Join our Discord: https://discord.gg/Sjzyms9', '');
         this.duration = rssItem.itunes.duration;
         this.image = rssItem.itunes.image;
         this.episodeNumber = Number.parseInt(rssItem.itunes.episode);
