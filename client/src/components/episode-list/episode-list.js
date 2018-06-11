@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
 
 import RSSParser from 'rss-parser';
-import Iframe from 'react-iframe';
+
+// Components
+import EpisodeFull from '../episode-full/episode-full';
+
+// Model
+import EpisodeModel from '../../models/episode';
 
 class EpisodeList extends Component {
     constructor(props) {
@@ -32,28 +37,28 @@ class EpisodeList extends Component {
     }
 
     createEpisodes = () => {
-        let entries = [];
+        let episodes = [];
 
         if (this.state.podcastJson) {
-            entries = this.state.podcastJson.items.map((entry) => {
-                return (<div key={ entry.title }>
-                    <Iframe url={ entry.link + 'embed' }
-                            width="100%"
-                            height="150"
-                            id={ entry.title }
-                            display="initial"
-                            position="relative" />
-                </div>)
+            console.log(this.state.podcastJson.items);
+
+            episodes = this.state.podcastJson.items.map((rssItem) => {
+                var episode = new EpisodeModel(rssItem);
+                return (
+                    <EpisodeFull episode={ episode } />
+                )
             });
         }
 
-        return entries;
+        return episodes;
     }
 
     render() {
         return(
-            <div>
-                {this.createEpisodes()}
+            <div className="episode-list">
+                <div className="flex column justify-center align start">
+                    {this.createEpisodes()}
+                </div>
             </div>
         )
     }
