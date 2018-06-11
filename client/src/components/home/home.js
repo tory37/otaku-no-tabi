@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import EpisodePlayer from '../episode-player/episode-player';
+import EpisodeList from '../episode-list/episode-list';
 
 class SiteNav extends Component {
   render() {
     return (
         <div className="home flex row justify-center align-center full-width">
-            <EpisodePlayer />
+            <EpisodeList />
         </div>
     );
   }

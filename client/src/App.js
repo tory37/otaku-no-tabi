@@ -5,11 +5,11 @@ import {
 } from 'react-router-dom';
 
 // Layout Components
-import SiteNav from './site-nav/site-nav';
+import SiteNav from './components/site-nav/site-nav';
 
 // Route Components
-import Home from './home/home';
-import NotFound from './not-found/not-found';
+import Home from './components/home/home';
+import NotFound from './components/not-found/not-found';
 
 const PAGES = {
   '/': Home
