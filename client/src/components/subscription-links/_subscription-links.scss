@@ -1,0 +1,85 @@
+.subscription-links {
+    
+    .entry {
+        color: white;
+        width: 150px;
+        height: 40px;
+        border-radius: 4px;
+        margin-top: 5px;
+
+        text-decoration: none !important;
+
+        img {
+            width: 20px;
+            filter: invert(1);
+        }
+
+        span {
+            margin-left: 10px;
+        }
+
+        &.apple {
+            background-color: #cb6aff;
+            
+            &:hover {
+                background-color: #9c6eb3;
+            }
+        }
+
+        &.castro {
+            background-color: #ffd034;
+            
+            &:hover {
+                background-color: #ebca5e;
+            }
+        }
+
+        &.google {
+            background-color: #ff932e;
+            
+            &:hover {
+                background-color: #e89e58;
+            }
+        }
+
+        &.pocket {
+            background-color: #ff3131;
+            
+            &:hover {
+                background-color: #eb5b5b;
+            }
+        }
+
+        &.radio {
+            background-color: #2aff2a;
+            
+            &:hover {
+                background-color: #4dcf4b;
+            }
+        }
+
+        &.stitcher {
+            background-color: #4c91ff;
+            
+            &:hover {
+                background-color: #6894d1;
+            }
+        }
+
+        &.tunein {
+            background-color: #55ffb5;
+            
+            &:hover {
+                background-color: #71d4a6;
+            }
+        }
+
+        &.rss {
+            background-color: #ff91d1;
+            
+            &:hover {
+                background-color: #b0879e;
+            }
+        }
+    }
+}

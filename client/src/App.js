@@ -6,6 +6,7 @@ import {
 
 // Layout Components
 import SiteNav from './components/site-nav/site-nav';
+import SubscriptionLinks from './components/subscription-links/subscription-links';
 
 // Route Components
 import Home from './components/home/home';
@@ -19,11 +20,17 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <div className="App">
+        <div className="app">
           <SiteNav />
 
-          <Route exact path="/" component={Home}/>
-          {/* <Route path="/podcast" component={Podcast}/> */}
+          <div className="flex row justify-space-between align-start">
+            <div className="route-container"> 
+              <Route exact path="/" component={Home}/>
+            </div>
+            <div className="sidebar-container">
+              <SubscriptionLinks />
+            </div>
+          </div>
         </div>
       </Router>
     );
