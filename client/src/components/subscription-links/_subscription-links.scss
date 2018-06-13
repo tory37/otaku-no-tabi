@@ -56,11 +56,19 @@
             }
         }
 
-        &.radio {
-            background-color: #2aff2a;
+        &.overcast {
+            background-color: #ffa996;
             
             &:hover {
-                background-color: #4dcf4b;
+                background-color: #e6745d;
+            }
+        }
+
+        &.radio {
+            background-color: #50c94e;
+            
+            &:hover {
+                background-color: #69b068;
             }
         }
 
@@ -73,10 +81,10 @@
         }
 
         &.tunein {
-            background-color: #55ffb5;
+            background-color: #51cbff;
             
             &:hover {
-                background-color: #71d4a6;
+                background-color: #1fb4e6;
             }
         }
 
