@@ -9,8 +9,13 @@
         .logo {
             font-size: 24px;
             
-            &:hover {
-                cursor: pointer;
+            a {
+                color: white;
+                text-decoration: none;
+
+                &:hover {
+                    color: darkgray;
+                }
             }
         }
 
@@ -20,6 +25,15 @@
 
             &:hover {
                 cursor: pointer;
+            }
+
+            a {
+                color: white;
+                text-decoration: none;
+
+                &:hover {
+                    color: darkgray;
+                }
             }
         }
     }

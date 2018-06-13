@@ -1,0 +1,6 @@
+.card {
+    background-color: lighten($color: $color-page-foreground, $amount: 10%);
+    border-radius: 2px;
+    padding: 20px;
+    margin-bottom: 20px;
+}

@@ -7,9 +7,11 @@ import {
 // Layout Components
 import SiteNav from './components/site-nav/site-nav';
 import SubscriptionLinks from './components/subscription-links/subscription-links';
+import FollowLinks from './components/follow-links/follow-links';
 
 // Route Components
 import Home from './components/home/home';
+import Playlist from "./components/playlist/playlist";
 import NotFound from './components/not-found/not-found';
 
 const PAGES = {
@@ -23,12 +25,16 @@ class App extends Component {
         <div className="app">
           <SiteNav />
 
-          <div className="flex row justify-space-between align-start">
-            <div className="route-container"> 
-              <Route exact path="/" component={Home}/>
-            </div>
-            <div className="sidebar-container">
-              <SubscriptionLinks />
+          <div className="body flex row justify-center align-start">
+            <div className="body-inner flex row justify-end align-start">
+              <div className="route-container full-width"> 
+                <Route exact path="/" component={Home} />
+                <Route exact path="/playlist/:keyword" component={Playlist} />
+              </div>
+              <div className="sidebar-container flex column justify-start align-center">
+                <SubscriptionLinks />
+                <FollowLinks />
+              </div>
             </div>
           </div>
         </div>

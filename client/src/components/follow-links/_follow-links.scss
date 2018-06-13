@@ -1,0 +1,67 @@
+.follow-links {
+    padding-top: 10px !important; 
+
+    .follow {
+        color: white;
+        font-size: 16px;
+    }
+    
+    .entry {
+        color: white;
+        width: 150px;
+        height: 40px;
+        border-radius: 4px;
+        margin-top: 5px;
+
+        text-decoration: none !important;
+
+        img {
+            width: 20px;
+            filter: invert(1);
+        }
+
+        span {
+            margin-left: 10px;
+        }
+
+        &.discord {
+            background-color: #b288ff;
+            
+            &:hover {
+                background-color: #824de6;
+            }
+        }
+
+        &.facebook {
+            background-color: #7b82ff;
+            
+            &:hover {
+                background-color: #4149e6;
+            }
+        }
+
+        &.twitter {
+            background-color: #76cfff;
+            
+            &:hover {
+                background-color: #3cabe6;
+            }
+        }
+
+        &.reddit {
+            background-color: #ff4f55;
+            
+            &:hover {
+                background-color: #e61823;
+            }
+        }
+
+        &.youtube {
+            background-color: #ffc36f;
+            
+            &:hover {
+                background-color: #e69934;
+            }
+        }
+    }
+}

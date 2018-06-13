@@ -2,6 +2,7 @@
 @import 'scss/colors';
 @import 'scss/flex';
 @import 'scss/layout';
+@import 'scss/card';
 
 /* APP */
 @import 'App';
@@ -10,6 +11,8 @@
 @import 'components/site-nav/site-nav';
 @import 'components/episode-full/episode-full';
 @import 'components/subscription-links/subscription-links';
+@import 'components/follow-links/follow-links';
+@import 'components/episode-list/episode-list';
 
 body {
   margin: 0px !important;

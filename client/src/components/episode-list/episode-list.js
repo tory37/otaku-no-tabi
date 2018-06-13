@@ -27,7 +27,7 @@ class EpisodeList extends Component {
             if (err) {
                 console.log("Error: ", err);
             } else {
-                this.setState({podcastJson: feed})
+                this.setState({podcastJson: feed});
             }
         })
     }
@@ -38,13 +38,14 @@ class EpisodeList extends Component {
 
     createEpisodes = () => {
         var keywords = this.props.keywords;
+        var title = this.props.title;
         let episodes = [];
 
         if (this.state.podcastJson) {
             console.log(this.state.podcastJson.items);
 
             episodes = this.state.podcastJson.items.filter((rssItem) => {
-                if (rssItem.title.includes(keywords)) {
+                if (rssItem.title.toLowerCase().indexOf(keywords.toLowerCase()) !== -1) {
                     return true;
                 } 
                 return false;
@@ -57,12 +58,17 @@ class EpisodeList extends Component {
             });
         }
 
+        console.log(episodes);
+
         return episodes;
     }
 
     render() {
         return(
-            <div className="episode-list">
+            <div className="episode-list card">
+                <div className="header">
+                    {this.props.title}
+                </div>
                 <div className="flex column justify-center align start">
                     {this.createEpisodes()}
                 </div>
