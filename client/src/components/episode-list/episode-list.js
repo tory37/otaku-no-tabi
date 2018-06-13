@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 
-import RSSParser from 'rss-parser';
-
 // Components
 import EpisodeFull from '../episode-full/episode-full';
 
 // Model
 import EpisodeModel from '../../models/episode';
+
+import RSSParser from 'rss-to-json';
 
 class EpisodeList extends Component {
     constructor(props) {
@@ -22,8 +22,8 @@ class EpisodeList extends Component {
 
         const CORS_PROXY = "https://cors-anywhere.herokuapp.com/"
         
-        let parser = new RSSParser();
-        parser.parseURL(CORS_PROXY + rssUrl, (err, feed) => {
+        //let parser = new RSSParser();
+        RSSParser.load(CORS_PROXY + rssUrl, (err, feed) => {
             if (err) {
                 console.log("Error: ", err);
             } else {
