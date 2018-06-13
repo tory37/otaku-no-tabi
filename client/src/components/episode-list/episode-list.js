@@ -44,12 +44,20 @@ class EpisodeList extends Component {
         if (this.state.podcastJson) {
             console.log(this.state.podcastJson.items);
 
-            episodes = this.state.podcastJson.items.filter((rssItem) => {
-                if (rssItem.title.toLowerCase().indexOf(keywords.toLowerCase()) !== -1) {
-                    return true;
-                } 
-                return false;
-            }).map((rssItem) => {
+            var unmapped;
+
+            if (keywords === null || keywords === "") {
+                unmapped = [this.state.podcastJson.items[0]];
+            } else {
+                unmapped = this.state.podcastJson.items.filter((rssItem) => {
+                    if (rssItem.title.toLowerCase().indexOf(keywords.toLowerCase()) !== -1) {
+                        return true;
+                    } 
+                    return false;
+                })
+            }
+            
+            episodes = unmapped.map((rssItem) => {
                 var episode = new EpisodeModel(rssItem);
             
                 return (

@@ -18,7 +18,8 @@ class EpisodeFull extends Component {
                     position="relative" />
         </div>
 
-        <div className="description" dangerouslySetInnerHTML={ {__html: episode.content} }>  
+        <div className="description" >  
+          { episode.content }
         </div>
 
       </div>

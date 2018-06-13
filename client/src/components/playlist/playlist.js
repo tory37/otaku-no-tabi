@@ -14,11 +14,18 @@ class Playlist extends Component {
   }
 
   onRouteChanged() {
-    this.setState({keyword: this.props.match.params.keyword});
+    if (this.props.match && this.props.match.params && this.props.match.params.keyword) {
+      this.setState({keyword: this.props.match.params.keyword});
+    } else {
+      this.setState({keyword: ""});
+    }
   }
 
   mapKeywordToTitle() {
     switch (this.state.keyword) {
+      case null:
+      case "":
+        return "Latest Episode";
       case "shuukan":
         return "Otaku Shuukan";
       case "movie": 
