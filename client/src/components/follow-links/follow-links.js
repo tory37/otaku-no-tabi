@@ -11,11 +11,11 @@ class SubscriptionLink extends Component {
                 <i className="fab fa-discord" />
                 <span>Discord</span>
             </a>
-            <a className="entry facebook flex row justify-center align-center" href="https://m.facebook.com/otakunotabi">
+            <a className="entry facebook flex row justify-center align-center" href="https://facebook.com/otakunotabi">
                 <i className="fab fa-facebook" />
                 <span>Facebook</span>
             </a>
-            <a className="entry twitter flex row justify-center align-center" href="https://twitter.com/otaku_tabihttps://www.reddit.com/r/otakunotabi/">
+            <a className="entry twitter flex row justify-center align-center" href="https://twitter.com/otaku_tabi">
                 <i className="fab fa-twitter" />
                 <span>Twitter</span>
             </a>

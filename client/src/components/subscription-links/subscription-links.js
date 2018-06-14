@@ -23,7 +23,7 @@ class SubscriptionLink extends Component {
                 <img alt="" src="https://assets.podiant.co/img/pcast.svg" />
                 <span>Pocket Casts</span>
             </a>
-            <a className="entry overcast flex row justify-center align-center" href="http://feeds.podiant.co/otakunotabi/rss.xml">
+            <a className="entry overcast flex row justify-center align-center" href="https://overcast.fm/itunes1390414636/otaku-no-tabi">
                 <img alt="" src="https://assets.podiant.co/img/overcast.svg" />
                 <span>Overcast</span>
             </a>
