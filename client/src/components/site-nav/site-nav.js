@@ -11,28 +11,28 @@ class SiteNav extends Component {
                   Otaku no Tabi
                 </Link>
               </div>
-
+        
               <div className="tab">
                 <Link to="/">
                   Home
                 </Link>
               </div>
-
+              |
               <div className="tab">
                 <Link to="/playlist/shuukan">
                   Otaku Shuukan
                 </Link>
               </div>
-
+              |
               <div className="tab">
                 <Link to="/playlist/seasonal">
                   Seasonal Anime
                 </Link>
               </div>
-
+              |
               <div className="tab">
                 <Link to="/playlist/movie">
-                  Movie
+                  Movies
                 </Link>
               </div>
 
