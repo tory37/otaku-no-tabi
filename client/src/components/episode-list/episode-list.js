@@ -37,7 +37,8 @@ class EpisodeList extends Component {
     }
 
     createEpisodes = () => {
-        var keywords = this.props.keywords;
+        let keywords = this.props.keywords;
+        let episode = this.props.episode;
         var title = this.props.title;
         let episodes = [];
 
@@ -46,8 +47,17 @@ class EpisodeList extends Component {
 
             var unmapped;
 
-            if (keywords === null || keywords === "") {
-                unmapped = [this.state.podcastJson.items[0]];
+            if (!keywords || keywords === "") {
+                if (!episode || episode === "") {
+                    unmapped = [this.state.podcastJson.items[0]];
+                } else {
+                    unmapped = this.state.podcastJson.items.filter((rssItem) => {
+                        if (rssItem.itunes_episode === episode) {
+                            return true;
+                        } 
+                        return false;
+                    })
+                }
             } else {
                 unmapped = this.state.podcastJson.items.filter((rssItem) => {
                     if (rssItem.title.toLowerCase().indexOf(keywords.toLowerCase()) !== -1) {
@@ -72,16 +82,27 @@ class EpisodeList extends Component {
     }
 
     render() {
-        return(
-            <div className="episode-list card">
-                <div className="header">
-                    {this.props.title}
+        var episodes = this.createEpisodes();
+        if (episodes.length > 0) {
+            return(
+                <div className="episode-list card">
+                    <div className="header">
+                        {this.props.title}
+                    </div>
+                    <div className="flex column justify-center align start">
+                        {this.createEpisodes()}
+                    </div>
                 </div>
-                <div className="flex column justify-center align start">
-                    {this.createEpisodes()}
+            )
+        } else {
+            return(
+                <div className="episode-list card">
+                    <div className="header">
+                        This episode or playlist does not exist
+                    </div>
                 </div>
-            </div>
-        )
+            )
+        }
     }
 }
 

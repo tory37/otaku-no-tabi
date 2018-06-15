@@ -14,8 +14,15 @@ class Playlist extends Component {
   }
 
   onRouteChanged() {
-    if (this.props.match && this.props.match.params && this.props.match.params.keyword) {
-      this.setState({keyword: this.props.match.params.keyword});
+    if (this.props.match && this.props.match.params) {
+      if ( this.props.match.params.keyword) {
+        this.setState({keyword: this.props.match.params.keyword});
+      } else  if (this.props.match.params.episode) {
+        this.setState({
+          episode: this.props.match.params.episode,
+          keyword: ""
+        });
+      }
     } else {
       this.setState({keyword: ""});
     }
@@ -25,7 +32,11 @@ class Playlist extends Component {
     switch (this.state.keyword) {
       case null:
       case "":
-        return "Latest Episode";
+        if (this.state.episode) {
+          return "Episode";
+        } else {
+          return "Latest Episode";
+        }
       case "shuukan":
         return "Otaku Shuukan";
       case "movie": 
@@ -46,7 +57,7 @@ class Playlist extends Component {
       return (
           <div className="home flex row justify-center align-center full-width">
               <div className="flex column full-width">
-                <EpisodeList keywords={this.state.keyword} title={this.mapKeywordToTitle()} />
+                <EpisodeList keywords={this.state.keyword} episode={this.state.episode} title={this.mapKeywordToTitle()} />
               </div>
           </div>
       );
@@ -54,7 +65,7 @@ class Playlist extends Component {
       return (
         <div className="home flex row justify-center align-center full-width">
             <div className="flex column">
-              This playlist is empty or does not exist
+              Error fetching episodes
             </div>
         </div>
     );

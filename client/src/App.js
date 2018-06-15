@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {
   BrowserRouter as Router,
+  Switch,
   Route
 } from 'react-router-dom';
 
@@ -28,8 +29,12 @@ class App extends Component {
           <div className="body flex row justify-center align-start">
             <div className="body-inner flex row justify-end align-start">
               <div className="route-container full-width"> 
-                <Route exact path="/" component={Home} />
-                <Route exact path="/playlist/:keyword" component={Playlist} />
+                <Switch>
+                  <Route exact path="/" component={Home} />
+                  <Route exact path="/playlist/:keyword" component={Playlist} />
+                  <Route exact path="/episode/:episode" component={Playlist} />
+                  <Route component={NotFound} />
+                </Switch>
               </div>
               <div className="sidebar-container flex column justify-start align-center">
                 <SubscriptionLinks />
