@@ -49,14 +49,16 @@ class EpisodeList extends Component {
 
             if (!keywords || keywords === "") {
                 if (!episode || episode === "") {
-                    unmapped = [this.state.podcastJson.items[0]];
+                    unmapped = this.state.podcastJson.items.filter((rssItem) => {
+                       return true; 
+                    });
                 } else {
                     unmapped = this.state.podcastJson.items.filter((rssItem) => {
                         if (rssItem.itunes_episode === episode) {
                             return true;
                         } 
                         return false;
-                    })
+                    });
                 }
             } else {
                 unmapped = this.state.podcastJson.items.filter((rssItem) => {

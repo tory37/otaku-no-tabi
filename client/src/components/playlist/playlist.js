@@ -35,17 +35,17 @@ class Playlist extends Component {
         if (this.state.episode) {
           return "Episode";
         } else {
-          return "Latest Episode";
+          return "All Episodes";
         }
-      case "shuukan":
+      case "shuukan:":
         return "Otaku Shuukan";
-      case "movie": 
-        return "Movie";
-      case "games":
+      case "movie:": 
+        return "Movies";
+      case "game:":
         return "Games";
-      case "seasonal":
-        return "Seasonal";
-      case "series":
+      case "seasonal:":
+        return "Seasonal Anime";
+      case "series:":
         return "Series";
       default:
         return null;

@@ -19,28 +19,28 @@ class SiteNav extends Component {
               </div>
               |
               <div className="tab">
-                <Link to="/playlist/shuukan">
+                <Link to="/playlist/shuukan:">
                   Otaku Shuukan
                 </Link>
               </div>
               |
               <div className="tab">
-                <Link to="/playlist/seasonal">
+                <Link to="/playlist/seasonal:">
                   Seasonal Anime
                 </Link>
               </div>
               |
               <div className="tab">
-                <Link to="/playlist/movie">
+                <Link to="/playlist/movie:">
                   Movies
                 </Link>
               </div>
-
-              {/* <div className="tab">
-                <Link to="/playlist/games">
+              |
+              <div className="tab">
+                <Link to="/playlist/game:">
                   Games
                 </Link>
-              </div> */}
+              </div>
 
               {/* <div className="tab">
                 <Link to="/playlist/series">
