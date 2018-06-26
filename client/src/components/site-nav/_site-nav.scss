@@ -5,6 +5,8 @@
 
     .inner-wrapper {
         max-width: 1024px;
+        margin-left: 20px;
+        margin-right: 20px;
 
         .logo {
             font-size: 24px;
@@ -35,6 +37,39 @@
                 &:hover {
                     color: darkgray;
                     text-decoration: underline;
+                }
+            }
+        }
+
+        .desktop-wrapper {
+            width: 80% !important;
+            @media screen and (max-width: 730px){
+                display: none;
+            }
+        }
+
+        .mobile-wrapper {
+            position: relative;
+
+            @media screen and (min-width: 730px){
+                display: none;
+            }
+
+            .drawer-button {
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+            .drawer-items {
+                position: absolute;
+                right: 25px;
+                top: -4px;
+                z-index: 10;
+                width: 170px;
+                
+                .tab {
+                    margin-bottom: 5px;
                 }
             }
         }

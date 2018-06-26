@@ -18,5 +18,8 @@
   },
   "engines": {
     "node": "8.7.0"
+  },
+  "devDependencies": {
+    "react-click-outside": "^3.0.1"
   }
 }

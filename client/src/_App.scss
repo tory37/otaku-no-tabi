@@ -3,18 +3,31 @@
     .body {
         width: 100%;
         margin-top: 20px;
+        cursor: pointer;
 
         .body-inner {
             max-width: 1200px;
             width: 1200px;
+            flex-wrap: wrap;
 
             .route-container {
                 padding-right: 20px;
+                padding-left: 20px;
                 width: calc(100% - 200px);
+
+                @media screen and (max-width: 550px){
+                    width: 100%;
+                }
             }
 
             .sidebar-container {
                 width: 200px;
+                padding-right: 20px;
+                @media screen and (max-width: 550px){
+                    padding-left: 20px;
+                    padding-right: 20px;
+                    width: 100%;
+                }
             }
         }
     }
