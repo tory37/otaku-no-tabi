@@ -74,8 +74,8 @@ class SiteNav extends Component {
                 </div>
                 |
                 <div className="tab">
-                  <Link to="/playlist/series">
-                    Old Series
+                  <Link to="/playlist/series:">
+                    Series
                   </Link>
                 </div> 
               </div>
