@@ -21,13 +21,21 @@ class EpisodeList extends Component {
         const rssUrl = "http://feeds.podiant.co/otakunotabi/rss.xml";
 
         const CORS_PROXY = "https://cors-anywhere.herokuapp.com/"
+
+        this.setState({isLoading: true});
         
         //let parser = new RSSParser();
         RSSParser.load(CORS_PROXY + rssUrl, (err, feed) => {
             if (err) {
                 console.log("Error: ", err);
+                this.setState({
+                    isLoading: false
+                })
             } else {
-                this.setState({podcastJson: feed});
+                this.setState({
+                    podcastJson: feed,
+                    isLoading: false
+                });
             }
         })
     }
@@ -85,7 +93,14 @@ class EpisodeList extends Component {
 
     render() {
         var episodes = this.createEpisodes();
-        if (episodes.length > 0) {
+        if (this.state.isLoading) {
+            return(
+                <div className="episode-list card">
+                    Loading...
+                </div>
+            )
+        }
+        else if (episodes.length > 0) {
             return(
                 <div className="episode-list card">
                     <div className="header">
