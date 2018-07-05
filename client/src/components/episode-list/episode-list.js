@@ -96,7 +96,9 @@ class EpisodeList extends Component {
         if (this.state.isLoading) {
             return(
                 <div className="episode-list card">
-                    Loading...
+                    <div className="header">
+                        Loading...
+                    </div>
                 </div>
             )
         }
